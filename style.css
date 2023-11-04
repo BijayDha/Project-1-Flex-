@@ -19,6 +19,7 @@ body {
 
 .container {
   width: 80%;
+  /* display: flex; */
   margin: auto;
 }
 .flex-between {
@@ -185,12 +186,17 @@ article .title {
 }
 
 .recc {
-  background: rgb(54, 54, 39);
+  /* display: flex;
+  flex-wrap: wrap; */
+  background: yellowgreen;
   margin-top: 32px;
-  padding: 32px 0;
+  padding: 32px;
 }
 
 .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .card {
@@ -199,6 +205,7 @@ article .title {
   background: white;
   padding: 32px;
   border-radius: 10px;
+  flex-grow: 1;
 }
 
 .card img {
@@ -234,4 +241,81 @@ article .title {
   border-radius: 8px;
   border: 1px solid grey;
   padding: 5px 10px;
+}
+
+/* media queries */
+/* 0-600px  Mobile */
+/* @media (max-width: 600px) {
+  .global {
+    background: rgba(18, 147, 187, 0.543);
+    /* display: none; */
+
+/* large monitor or TV 992px +  */
+
+/* @media (600px < width <992px) {
+  header {
+    background: yellow;
+  }
+} */
+/* 
+@media (max-width: 920px) {
+  header {
+    background: rgb(255, 0, 162);
+  }
+} */
+
+/* 600-992px for ipads */
+/* Media quries below 600px */
+
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .articles {
+    width: 100%;
+  }
+  .side-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .country,
+  .date {
+    flex-grow: 1;
+  }
+  .country {
+    margin-bottom: 0;
+  }
+}
+
+/* 0-600px mobile */
+@media (max-width: 600px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    /* box-shadow: -5px 5px 10px 5px grey;
+    border-radius: 10px;
+    padding: 20px 16px; */
+  }
+
+  .side-link {
+    flex-direction: column;
+  }
+
+  .art-img {
+    width: 100%;
+  }
+
+  .subs input {
+    margin-top: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+  /* hide global Msg */
 }
